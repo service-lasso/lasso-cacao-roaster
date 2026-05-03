@@ -50,4 +50,3 @@ Apps that want CACAO authoring and execution should include both:
 ## Sources
 
 - Upstream release: https://github.com/opencybersecurityalliance/cacao-roaster/releases/tag/v1.3.0
-- Donor reference: `C:\projects\typerefinery-ai\typerefinery\services\cacao-roaster`
