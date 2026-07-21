@@ -86,13 +86,16 @@
     "darwin": "${SERVICE_ARTIFACT_ROOT}/server.mjs",
     "default": "${SERVICE_ARTIFACT_ROOT}/server.mjs"
   },
-  "healthcheck": {
-    "type": "http",
-    "url": "${CACAO_ROASTER_URL}/healthcheck",
-    "expected_status": 200,
-    "retries": 180,
-    "interval": 500
-  },
+  "healthchecks": [
+    {
+      "id": "http-health",
+      "type": "http",
+      "url": "${CACAO_ROASTER_URL}/healthcheck",
+      "expected_status": 200,
+      "retries": 180,
+      "interval": 500
+    }
+  ],
   "updates": {
     "enabled": true,
     "mode": "notify",

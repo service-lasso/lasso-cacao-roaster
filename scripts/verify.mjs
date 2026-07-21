@@ -120,6 +120,20 @@ if (serviceManifest.execservice !== "@node" || !serviceManifest.depend_on?.inclu
   throw new Error("CACAO Roaster manifest must run through @node and depend on soarca.");
 }
 
+if ("healthcheck" in serviceManifest) {
+  throw new Error("CACAO Roaster manifest must use canonical healthchecks[] and not singular healthcheck.");
+}
+
+if (
+  !Array.isArray(serviceManifest.healthchecks) ||
+  serviceManifest.healthchecks.length !== 1 ||
+  serviceManifest.healthchecks[0]?.id !== "http-health" ||
+  serviceManifest.healthchecks[0]?.type !== "http" ||
+  serviceManifest.healthchecks[0]?.url !== "${CACAO_ROASTER_URL}/healthcheck"
+) {
+  throw new Error(`Unexpected healthchecks contract: ${JSON.stringify(serviceManifest.healthchecks)}`);
+}
+
 await extractArchive(expectedArchive, extractRoot);
 
 const metadata = JSON.parse(await readFile(path.join(extractRoot, "SERVICE-LASSO-PACKAGE.json"), "utf8"));
