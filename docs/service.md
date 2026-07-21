@@ -9,7 +9,7 @@
 - Runtime provider: `@node`
 - Dependency: `soarca`
 - Default HTTP port: `3000`
-- Healthcheck: `GET /healthcheck`
+- Healthchecks: `http-health` -> `GET /healthcheck`
 
 ## SOARCA Pairing
 

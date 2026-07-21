@@ -11,7 +11,7 @@ CACAO Roaster is an app-owned CACAO playbook authoring surface. It is disabled b
 - Runtime provider: `@node`
 - Required dependency: `soarca`
 - Default HTTP port: `3000`
-- Healthcheck: `GET http://127.0.0.1:${SERVICE_PORT}/healthcheck`
+- Healthchecks: `http-health` -> `GET http://127.0.0.1:${SERVICE_PORT}/healthcheck`
 - First package platforms: Windows x64, Linux x64, macOS arm64
 
 ## Release Artifacts
