@@ -1,5 +1,9 @@
 # CACAO Roaster Service
 
+## Canonical reader guidance
+
+Start with [app-owned service tasks](https://github.com/service-lasso/service-lasso/blob/develop/docs/components/app-service-tasks.md) for CACAO/SOARCA pairing in a consuming app. This page retains the component's manifest, runtime and packaging contracts. CACAO remains opt-in; source instructions do not establish installed-platform acceptance or release publication. Migration: [CACAO #6](https://github.com/service-lasso/lasso-cacao-roaster/issues/6), [Core #1419](https://github.com/service-lasso/service-lasso/issues/1419), reviewed source `bdc074e1ba0d90f873a372a090d8af26748322b9`.
+
 `lasso-cacao-roaster` packages CACAO Roaster 1.3.0 as a Service Lasso managed web UI.
 
 ## Defaults
